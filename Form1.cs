@@ -50,7 +50,7 @@ namespace cps_test
             {
                 timer1.Stop();
                 clicksPerSecond = count / 10.0;
-                DialogResult b = MessageBox.Show(clicksPerSecond + " CPS.", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information);
+                DialogResult b = MessageBox.Show(clicksPerSecond + " CPS.", "Click Speed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (clicksPerSecond > maxCPS)
                 {
                     maxCPS = clicksPerSecond;
@@ -94,7 +94,7 @@ namespace cps_test
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            DialogResult d = MessageBox.Show("Are you sure?", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Question);
+            DialogResult d = MessageBox.Show("Are you sure you want to retry?", "", MessageBoxButtons.RetryCancel, MessageBoxIcon.Question);
             if (d == DialogResult.Retry)
             {
                 restart();
